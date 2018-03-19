@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFN-Zz-POu">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="OdS-Yz-R5j"/>
                                     <barButtonItem title="New Game" id="0zF-rv-mHV">
@@ -43,63 +43,84 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7t-tR-4KR" userLabel="Usable Area">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbl-rM-J0c" userLabel="Game Board">
-                                        <rect key="frame" x="20" y="146" width="335" height="371"/>
+                                        <rect key="frame" x="20" y="159" width="374" height="414"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhA-dN-7v9">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="414"/>
+                                            </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wdo-lA-PQ5">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="371"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="414"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qtw-z4-YaZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="123.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="138"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7k-g5-6L2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="123.5"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jqi-2g-Wp2"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-P6-30A">
-                                                                <rect key="frame" x="111.5" y="0.0" width="112" height="123.5"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-P6-30A">
+                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDK-o5-5yh"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYz-H1-3yL">
-                                                                <rect key="frame" x="223.5" y="0.0" width="111.5" height="123.5"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYz-H1-3yL">
+                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q8o-Xt-Jbx"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d8c-3u-XCo">
-                                                        <rect key="frame" x="0.0" y="123.5" width="335" height="124"/>
+                                                        <rect key="frame" x="0.0" y="138" width="374" height="138"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-LT-Gdb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="124"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-LT-Gdb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOv-aM-g47"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzY-Iq-vVZ">
-                                                                <rect key="frame" x="111.5" y="0.0" width="112" height="124"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzY-Iq-vVZ">
+                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IKd-1F-Ltr"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaa-N8-0Vb">
-                                                                <rect key="frame" x="223.5" y="0.0" width="111.5" height="124"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaa-N8-0Vb">
+                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lA3-GC-8wH"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <viewLayoutGuide key="safeArea" id="edk-Jt-gBx"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n4Z-3A-Rtk">
-                                                        <rect key="frame" x="0.0" y="247.5" width="335" height="123.5"/>
+                                                        <rect key="frame" x="0.0" y="276" width="374" height="138"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-Fk-bpY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="123.5"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-Fk-bpY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5N-Go-eoS"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twS-us-Rrp">
-                                                                <rect key="frame" x="111.5" y="0.0" width="112" height="123.5"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twS-us-Rrp">
+                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SL0-tX-DvU"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-ws-PIK">
-                                                                <rect key="frame" x="223.5" y="0.0" width="111.5" height="123.5"/>
-                                                                <state key="normal" backgroundImage="iPhone_X"/>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-ws-PIK">
+                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bza-e5-IhN"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <viewLayoutGuide key="safeArea" id="4wO-I5-dhJ"/>
@@ -107,14 +128,17 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="670" id="09O-Rs-UHo"/>
                                             <constraint firstItem="wdo-lA-PQ5" firstAttribute="leading" secondItem="Jbl-rM-J0c" secondAttribute="leading" id="AmI-e3-p85"/>
+                                            <constraint firstAttribute="trailing" secondItem="UhA-dN-7v9" secondAttribute="trailing" id="BDc-Y8-y1H"/>
                                             <constraint firstAttribute="trailing" secondItem="wdo-lA-PQ5" secondAttribute="trailing" id="O6G-S8-WvU"/>
                                             <constraint firstAttribute="height" constant="670" id="Oy1-ml-w95"/>
+                                            <constraint firstAttribute="bottom" secondItem="UhA-dN-7v9" secondAttribute="bottom" id="PBs-n2-edp"/>
                                             <constraint firstItem="wdo-lA-PQ5" firstAttribute="top" secondItem="Jbl-rM-J0c" secondAttribute="top" id="UfY-Yu-t6F"/>
+                                            <constraint firstItem="UhA-dN-7v9" firstAttribute="leading" secondItem="Jbl-rM-J0c" secondAttribute="leading" id="Xrm-y6-LUa"/>
                                             <constraint firstAttribute="bottom" secondItem="wdo-lA-PQ5" secondAttribute="bottom" id="cuT-l2-GgM"/>
+                                            <constraint firstItem="UhA-dN-7v9" firstAttribute="top" secondItem="Jbl-rM-J0c" secondAttribute="top" id="dxw-I3-Hbe"/>
                                             <constraint firstAttribute="width" secondItem="Jbl-rM-J0c" secondAttribute="height" multiplier="28:31" id="nNS-Zr-Sr1"/>
                                         </constraints>
                                         <variation key="default">
@@ -137,13 +161,12 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duB-oR-xfQ">
-                                        <rect key="frame" x="20" y="86" width="335" height="48"/>
+                                        <rect key="frame" x="20" y="99" width="374" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Jbl-rM-J0c" firstAttribute="centerY" secondItem="R7t-tR-4KR" secondAttribute="centerY" id="EDf-HC-Hyl"/>
                                     <constraint firstItem="Jbl-rM-J0c" firstAttribute="leading" secondItem="R7t-tR-4KR" secondAttribute="leading" constant="20" id="amu-OG-pD9"/>
@@ -254,13 +277,24 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameBoardImageView" destination="UhA-dN-7v9" id="4vH-ja-wDa"/>
+                        <outlet property="gameStateLabel" destination="duB-oR-xfQ" id="ySW-Yz-Nhq"/>
+                        <outlet property="gameStateNavBar" destination="fYD-S2-lnE" id="lI6-3m-hCU"/>
+                        <outletCollection property="GameBoardButtons" destination="d7k-g5-6L2" collectionClass="NSMutableArray" id="baK-kW-jKm"/>
+                        <outletCollection property="GameBoardButtons" destination="Z0c-P6-30A" collectionClass="NSMutableArray" id="DW7-EP-imO"/>
+                        <outletCollection property="GameBoardButtons" destination="EYz-H1-3yL" collectionClass="NSMutableArray" id="sQ5-MF-rW6"/>
+                        <outletCollection property="GameBoardButtons" destination="RN6-LT-Gdb" collectionClass="NSMutableArray" id="Ju5-gf-ITd"/>
+                        <outletCollection property="GameBoardButtons" destination="rzY-Iq-vVZ" collectionClass="NSMutableArray" id="lVK-q7-zWJ"/>
+                        <outletCollection property="GameBoardButtons" destination="zaa-N8-0Vb" collectionClass="NSMutableArray" id="RtW-ts-frN"/>
+                        <outletCollection property="GameBoardButtons" destination="Duj-Fk-bpY" collectionClass="NSMutableArray" id="F2G-RU-X4S"/>
+                        <outletCollection property="GameBoardButtons" destination="twS-us-Rrp" collectionClass="NSMutableArray" id="p0n-1g-Uub"/>
+                        <outletCollection property="GameBoardButtons" destination="xcc-ws-PIK" collectionClass="NSMutableArray" id="t5l-7Q-MIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="72.65625" y="38.0859375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iPhone_X" width="86" height="98"/>
-    </resources>
 </document>
