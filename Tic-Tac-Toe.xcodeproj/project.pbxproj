@@ -15,7 +15,7 @@
 		0A0C86AE2060096500BAC1DC /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0C86AB2060096500BAC1DC /* Icon-72.png */; };
 		0A0C86AF2060096500BAC1DC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0C86AC2060096500BAC1DC /* Icon@2x.png */; };
 		0A0C86B02060096500BAC1DC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0C86AD2060096500BAC1DC /* Icon.png */; };
-		0A0C86BE2060155700BAC1DC /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C86BD2060155700BAC1DC /* TicTacToeGame.swift */; };
+		0A110955206A053200C2C77D /* TicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A110954206A053200C2C77D /* TicTacToeGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,9 @@
 		0A0C86AB2060096500BAC1DC /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		0A0C86AC2060096500BAC1DC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		0A0C86AD2060096500BAC1DC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		0A0C86BD2060155700BAC1DC /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
+		0A110952206A053100C2C77D /* Tic-Tac-Toe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tic-Tac-Toe-Bridging-Header.h"; sourceTree = "<group>"; };
+		0A110953206A053200C2C77D /* TicTacToeGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToeGame.h; sourceTree = "<group>"; };
+		0A110954206A053200C2C77D /* TicTacToeGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,9 @@
 				0A0C8681205AD05200BAC1DC /* Assets.xcassets */,
 				0A0C8683205AD05200BAC1DC /* LaunchScreen.storyboard */,
 				0A0C8686205AD05200BAC1DC /* Info.plist */,
-				0A0C86BD2060155700BAC1DC /* TicTacToeGame.swift */,
+				0A110953206A053200C2C77D /* TicTacToeGame.h */,
+				0A110954206A053200C2C77D /* TicTacToeGame.m */,
+				0A110952206A053100C2C77D /* Tic-Tac-Toe-Bridging-Header.h */,
 			);
 			path = "Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -116,6 +120,7 @@
 				TargetAttributes = {
 					0A0C8676205AD05200BAC1DC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -159,8 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A0C86BE2060155700BAC1DC /* TicTacToeGame.swift in Sources */,
 				0A0C867D205AD05200BAC1DC /* ViewController.swift in Sources */,
+				0A110955206A053200C2C77D /* TicTacToeGame.m in Sources */,
 				0A0C867B205AD05200BAC1DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,11 +303,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tic-Tac-Toe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rosehulman.alangavr.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tic-Tac-Toe/Tic-Tac-Toe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,11 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Tic-Tac-Toe/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rosehulman.alangavr.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tic-Tac-Toe/Tic-Tac-Toe-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

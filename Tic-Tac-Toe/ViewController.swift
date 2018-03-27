@@ -56,27 +56,29 @@ class ViewController: UIViewController {
         var oImage: UIImage
         if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact){
            // print("Using iPhone board")
-            gameStateLabel.text = game.gameState.rawValue
+            gameStateLabel.text = game.getStateString()
             xImage = #imageLiteral(resourceName: "iPhone_X")
             oImage = #imageLiteral(resourceName: "iPhone_O")
         } else {
            // print("Using iPad board")
-            gameStateNavBar.topItem?.title = game.gameState.rawValue
+            gameStateNavBar.topItem?.title = game.getStateString()
             xImage = #imageLiteral(resourceName: "iPad_X")
             oImage = #imageLiteral(resourceName: "iPad_O")
         }
         
         for i in 0..<9 {
             let button = GameBoardButtons[i]
-            switch(game.gameBoard[i]) {
-            case .x:
-                button.setImage(xImage, for: UIControlState.normal)
-            case .o:
-                button.setImage(oImage, for:UIControlState.normal)
-            case .none:
-                button.setImage(nil, for: UIControlState.normal)
+           // switch(game.getMarkTypeString(MarkType(rawValue: button.tag)!)) {
+            switch( game.getBoardMark(at: i)){
+                case .X:
+                    button.setImage(xImage, for: UIControlState.normal)
+                case .O:
+                    button.setImage(oImage, for:UIControlState.normal)
+                case .none:
+                    button.setImage(nil, for: UIControlState.normal)
             }
         }
+        print(game)
     }
     
 }
